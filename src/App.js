@@ -6,6 +6,8 @@ import HomePage from './components/HomePage/HomePage';
 import AuthContext from './components/AuthContext/Auth-context';
 import Complete from './components/AuthPages/Complete';
 import EditDetails from './components/AuthPages/EditDetails';
+import VerifyEmail from './components/AuthPages/VerifyEmail';
+import ForgotPass from './components/AuthPages/ForgotPass';
 
 function App() {
   const authCtx = useContext(AuthContext);
@@ -14,9 +16,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        <Route path='/forgot' element = {<ForgotPass/>}></Route>
         <Route path='/' element = {!login ? <LoginSignUp/> : <HomePage/>}>
           <Route path= '/complete'  element = {<Complete/>}/>
           <Route path='/editDetails' element = {<EditDetails/>}/>
+          <Route path='/verifyEmail' element = {<VerifyEmail/>}/>
         </Route>
       </Routes>
     </Router>

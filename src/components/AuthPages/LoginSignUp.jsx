@@ -1,6 +1,7 @@
 import {  useContext, useRef, useState } from "react"
 import classes from "./Login.module.css";
 import AuthContext from "../AuthContext/Auth-context";
+import { Link } from "react-router-dom";
 const LoginSignUp = () => {
 
     const [login,setLogin] = useState(true);
@@ -76,7 +77,7 @@ const LoginSignUp = () => {
     return <form  onSubmit = {login ? submitHandler2 : submitHandler} className={classes.loginMain}>
         <div className={classes.forms}>
             <div className={classes.elelog}>
-                <label>Enter Your Email</label>
+                <label> Enter Your Email</label>
                 <input type="email" ref={emailRef}/>
             </div>
 
@@ -87,6 +88,7 @@ const LoginSignUp = () => {
 
 
             <div className={classes.togglelogin} onClick={toggleHandler}>{login ? 'Create an Account' : 'Login to existing'}</div>
+            <div className={classes.togglelfor}><Link to={'/forgot'}>Forgot Password</Link></div>
         </div>
 
         <div className={classes.loginbtn}>

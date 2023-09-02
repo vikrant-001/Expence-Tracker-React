@@ -12,7 +12,7 @@ const SideBar = () => {
         <div className={classes.sideMain}>
             <p><NavLink to='/complete' className={classes.active}>Complete Profile</NavLink></p>
             <p><NavLink to={'/editDetails'} className={classes.active}>Edit Details</NavLink></p>
-            <p>Verify Email</p>
+            <p><NavLink to={'/verifyEmail'} className={classes.active}>Verify Email</NavLink></p>
             <p onClick={logoutHandler}>Logout</p>
         </div>
     </div>)
