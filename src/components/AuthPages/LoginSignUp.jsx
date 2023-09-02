@@ -1,11 +1,14 @@
-import {  useRef, useState } from "react"
+import {  useContext, useRef, useState } from "react"
 import classes from "./Login.module.css";
+import AuthContext from "../AuthContext/Auth-context";
 const LoginSignUp = () => {
 
     const [login,setLogin] = useState(true);
      
     const emailRef = useRef();
     const passwordRef = useRef();
+
+    const authCtx = useContext(AuthContext);
 
     const toggleHandler = () => {
         setLogin(!login);
@@ -18,7 +21,7 @@ const LoginSignUp = () => {
         }
 
         try{
-            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCJHhjWfvJsQgX9BVv3VbjxgZTJMV2_9rE',{
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCJHhjWfvJsQgX9BVv3VbjxgZTJMV2_9rE',{
                 method:'POST',
                 body:JSON.stringify({
                     email:emailRef.current.value,
@@ -31,11 +34,14 @@ const LoginSignUp = () => {
             });
 
             const data = await response.json();
-            
+            console.log('loginData' ,data);
+            authCtx.token = data.idToken;
+            authCtx.login(authCtx.token);
+
         }
 
         catch(error){
-
+            console.log(error);
         }
     }
 
@@ -67,7 +73,7 @@ const LoginSignUp = () => {
         }
     }
   
-    return <form  onSubmit = {submitHandler} className={classes.loginMain}>
+    return <form  onSubmit = {login ? submitHandler2 : submitHandler} className={classes.loginMain}>
         <div className={classes.forms}>
             <div className={classes.elelog}>
                 <label>Enter Your Email</label>

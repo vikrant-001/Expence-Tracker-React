@@ -1,0 +1,29 @@
+.sideMain{
+    width: 15%;
+    background-color: black;
+    color: white;
+    margin-left: 0.3rem;
+    padding: 1rem;
+    height: 100vh;
+    margin-top: -3.2rem;
+}
+
+.sideMain p {
+    text-align: center;
+    border: 2px solid white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    
+}
+
+.sideMain p:hover{
+    text-decoration: underline;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+.active{
+    color: white;
+}
+.active:hover{
+    color: black;
+}
