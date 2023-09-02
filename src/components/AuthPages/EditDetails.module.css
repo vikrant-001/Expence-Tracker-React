@@ -1,0 +1,32 @@
+.mainUser{
+    margin-left: 28rem;
+    margin-top: -32rem;
+    background-color: black;
+    width: fit-content;
+    padding: 1rem;
+    color: white;
+}
+.userEmail{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    
+}
+.userName{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+.userPhoto{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+.userinputs{
+    display: flex;
+    gap: 1rem;
+}
+.userBtn button{
+    background-color: blue;
+    margin: 1rem;
+    padding:1rem
+
+}

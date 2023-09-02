@@ -14,18 +14,22 @@ const Complete = () => {
             return;
         }
         try{
-            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCJHhjWfvJsQgX9BVv3VbjxgZTJMV2_9rE',{
+            const response = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:update?key=AIzaSyCJHhjWfvJsQgX9BVv3VbjxgZTJMV2_9rE',{
             method:'POST',
             body:JSON.stringify({
                 idToken:authCtx.token,
                 displayName:nameRef.current.value,
                 photoUrl:urlRef.current.value,
                 returnSecureToken:true,
-            })
+            }),
+            headers:{
+                'Content-Type': 'application/json'
+            }
             })
 
             const data = await response.json();
             console.log(data)
+
             alert("Profile Updated" ,data);
         }
 
