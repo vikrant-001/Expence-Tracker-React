@@ -52,3 +52,34 @@
     border: 2px solid white;
     border-radius: 1rem;
 }
+
+.userCont{
+    margin-left: 28rem;
+    display: flex;
+    gap:2rem;
+    flex-direction: column;
+    width: 40%;
+    margin-top: 1rem;
+    
+}
+
+.userValue{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    gap: 2rem;
+    width: 100%;
+ 
+    padding-left: 0.88rem;
+}
+
+.userBtn{
+    display: flex;
+    gap: 1rem;
+}
+.userBtn button{
+    background-color: blue;
+    height: 2rem;
+    margin-top: 0.8rem;
+}
