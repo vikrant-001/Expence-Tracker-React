@@ -1,0 +1,54 @@
+.fromcont{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 60%;
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-left: 20rem;
+    margin-top: -37rem;
+    background-color: rgb(203, 170, 233);
+    padding: 2em;
+}
+
+.fromConte{
+    width: 70%;
+    background-color: burlywood;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.forms{
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    margin: 0 auto;
+    margin-top: 0.7rem;
+}
+
+.forms label{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.forms input{
+    background-color: black;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+}
+
+.forms button{
+    background-color: chartreuse;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.forms button:hover{
+    background-color:blue;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 1rem;
+}
